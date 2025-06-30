@@ -10,7 +10,8 @@
   const images = Object.entries(
     import.meta.glob("$lib/images/*.{png,jpg,jpeg,webp,gif}", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   )
     .sort(([a], [b]) => a.localeCompare(b))
